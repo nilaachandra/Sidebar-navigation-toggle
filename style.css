@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Space+Grotesk&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #d1d5d8;
+    font-family: 'Space Grotesk', Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.slide{
+    height: 100%;
+    width: 15rem;
+    background-color: white;
+    position: absolute;
+    transition: 0.6s ease-out;
+    transform: translate(-250px);
+}
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    padding-right: 2rem;
+    margin: 1rem 1rem 1rem 3rem;
+    left: 60px;
+}
+.slide-ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.slide-ul li{
+    font-size: 1.2rem
+}
+.slide-ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    transition: 0.2 ease-out;
+}
+.slide-ul li i{
+    width: 2.5rem;
+    text-align: center;
+}
+input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+}
+.toggle{
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    z-index: 1;
+    border-radius: 2px;
+    background-color: red;
+    top: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px black;
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 22px;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.top-line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.middle-line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.bottom-line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input:checked ~ .toggle .top-line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom-line{
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle-line{
+    display: none;
+    visibility: hidden;
+}
+input:checked ~ .slide{
+    transform: translate(0);
+    box-shadow: 0 0 15px black;
+    transition: 0.6s ease-in;
+}
+.slide ul li:hover a{
+    background-color: black;
+    color: white;
+    transition: all 0.4s ease-in;
+}
