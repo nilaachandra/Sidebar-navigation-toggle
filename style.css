@@ -19,7 +19,7 @@ body{
     width: 15rem;
     background-color: white;
     position: absolute;
-    transition: 0.5s ease-out;
+    transition: 0.4s ease-out;
     transform: translate(-250px);
 }
 .logo{
@@ -111,7 +111,7 @@ input:checked ~ .toggle .middle-line{
 input:checked ~ .slide{
     transform: translate(0);
     box-shadow: 0 0 15px black;
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
 }
 .slide ul li:hover a{
     background-color: black;
